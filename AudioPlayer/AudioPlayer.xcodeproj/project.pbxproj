@@ -68,7 +68,6 @@
 		C01FDC201FC63B2000174287 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				C01FDC101FC63B0B00174287 /* ViewController.swift */,
 				C01FDC1A1FC63B0B00174287 /* Info.plist */,
 				C01FDC221FC63B6600174287 /* Storyboards */,
 				C01FDC211FC63B4900174287 /* Resources */,
@@ -103,6 +102,7 @@
 		C01FDC241FC63C3300174287 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C01FDC101FC63B0B00174287 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
