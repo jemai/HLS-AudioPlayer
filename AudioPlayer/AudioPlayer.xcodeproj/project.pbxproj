@@ -68,10 +68,10 @@
 		C01FDC201FC63B2000174287 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				C01FDC221FC63B6600174287 /* Storyboards */,
-				C01FDC211FC63B4900174287 /* Resources */,
 				C01FDC101FC63B0B00174287 /* ViewController.swift */,
 				C01FDC1A1FC63B0B00174287 /* Info.plist */,
+				C01FDC221FC63B6600174287 /* Storyboards */,
+				C01FDC211FC63B4900174287 /* Resources */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J7J4FNK28U;
-				INFOPLIST_FILE = AudioPlayer/Info.plist;
+				INFOPLIST_FILE = AudioPlayer/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Abdelhak-Jemaii.AudioPlayer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -387,7 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J7J4FNK28U;
-				INFOPLIST_FILE = AudioPlayer/Info.plist;
+				INFOPLIST_FILE = AudioPlayer/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Abdelhak-Jemaii.AudioPlayer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
