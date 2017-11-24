@@ -62,9 +62,9 @@ class Player: UIView {
         didSet {
             guard let url = url else { return }
             //
-            DownloadManager.loadData(from: url) { (localUrl, error) in
-                self.configureSession(for: localUrl!)
-            }
+//            DownloadManager.loadData(from: url) { (localUrl, error) in
+//                self.configureSession(for: localUrl!)
+//            }
         }
     }
     

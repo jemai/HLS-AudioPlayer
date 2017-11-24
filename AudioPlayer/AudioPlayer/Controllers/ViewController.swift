@@ -36,8 +36,8 @@ class ViewController: UIViewController {
             playerHolder.heightAnchor.constraint(equalToConstant: playerDimension),
             ])
         //
-        let url = URL(string : Urls.trackUrl)
-        playerHolder.player.url = url
+//        let url = URL(string : Urls.trackUrl)
+    //    playerHolder.player.url = url
     }
 
     override func didReceiveMemoryWarning() {
