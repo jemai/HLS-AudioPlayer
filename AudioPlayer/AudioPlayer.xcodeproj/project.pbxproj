@@ -16,6 +16,12 @@
 		FA51C9181FC6D7C00006421C /* PlayerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C9171FC6D7C00006421C /* PlayerHolder.swift */; };
 		FA51C9291FC6E28E0006421C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C9281FC6E28E0006421C /* UIViewExtension.swift */; };
 		FA51C92B1FC6E29B0006421C /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C92A1FC6E29B0006421C /* UIColorExtension.swift */; };
+		FA51C9A21FC84B190006421C /* URLS.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C9A11FC84B190006421C /* URLS.swift */; };
+		FA51C9A41FC84BAA0006421C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C9A31FC84BAA0006421C /* Player.swift */; };
+		FA51C9A81FC84E3F0006421C /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C9A71FC84E3F0006421C /* Dimensions.swift */; };
+		FA51C9AC1FC857A50006421C /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C9AB1FC857A50006421C /* DownloadManager.swift */; };
+		FA51C9AF1FC860E60006421C /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C9AE1FC860E60006421C /* Enumerations.swift */; };
+		FA51C9B11FC862410006421C /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C9B01FC862410006421C /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		FA51C9171FC6D7C00006421C /* PlayerHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHolder.swift; sourceTree = "<group>"; };
 		FA51C9281FC6E28E0006421C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FA51C92A1FC6E29B0006421C /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		FA51C9A11FC84B190006421C /* URLS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLS.swift; sourceTree = "<group>"; };
+		FA51C9A31FC84BAA0006421C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FA51C9A71FC84E3F0006421C /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		FA51C9AB1FC857A50006421C /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		FA51C9AE1FC860E60006421C /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		FA51C9B01FC862410006421C /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				C01FDC0E1FC63B0B00174287 /* AppDelegate.swift */,
+				FA51C9AA1FC857990006421C /* Managers */,
 				C01FDC251FC63C3300174287 /* Helpers */,
 				C01FDC2A1FC63C3300174287 /* View */,
 				C01FDC241FC63C3300174287 /* Controllers */,
@@ -109,6 +122,7 @@
 		C01FDC251FC63C3300174287 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FA51C9AD1FC860D50006421C /* Enums */,
 				FA51C90E1FC6D69F0006421C /* Constants */,
 				FA51C9221FC6E08E0006421C /* Extensions */,
 			);
@@ -127,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				FA51C90F1FC6D69F0006421C /* Colors.swift */,
+				FA51C9A11FC84B190006421C /* URLS.swift */,
+				FA51C9A71FC84E3F0006421C /* Dimensions.swift */,
+				FA51C9B01FC862410006421C /* Keys.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -135,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				FA51C9171FC6D7C00006421C /* PlayerHolder.swift */,
+				FA51C9A31FC84BAA0006421C /* Player.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -146,6 +164,22 @@
 				FA51C92A1FC6E29B0006421C /* UIColorExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA51C9AA1FC857990006421C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FA51C9AB1FC857A50006421C /* DownloadManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FA51C9AD1FC860D50006421C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				FA51C9AE1FC860E60006421C /* Enumerations.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,11 +255,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA51C9291FC6E28E0006421C /* UIViewExtension.swift in Sources */,
+				FA51C9B11FC862410006421C /* Keys.swift in Sources */,
+				FA51C9AC1FC857A50006421C /* DownloadManager.swift in Sources */,
+				FA51C9A21FC84B190006421C /* URLS.swift in Sources */,
 				C01FDC111FC63B0B00174287 /* ViewController.swift in Sources */,
 				FA51C9181FC6D7C00006421C /* PlayerHolder.swift in Sources */,
+				FA51C9A41FC84BAA0006421C /* Player.swift in Sources */,
 				FA51C9131FC6D69F0006421C /* Colors.swift in Sources */,
 				C01FDC0F1FC63B0B00174287 /* AppDelegate.swift in Sources */,
 				FA51C92B1FC6E29B0006421C /* UIColorExtension.swift in Sources */,
+				FA51C9A81FC84E3F0006421C /* Dimensions.swift in Sources */,
+				FA51C9AF1FC860E60006421C /* Enumerations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

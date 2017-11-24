@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }()
     
     // MARK: - Variables
-    let playerDimension : CGFloat = 300
+    let playerDimension = Dimensions.playerDimension
     //
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,9 @@ class ViewController: UIViewController {
             playerHolder.widthAnchor.constraint(equalToConstant: playerDimension),
             playerHolder.heightAnchor.constraint(equalToConstant: playerDimension),
             ])
+        //
+        let url = URL(string : Urls.trackUrl)
+        playerHolder.player.url = url
     }
 
     override func didReceiveMemoryWarning() {
