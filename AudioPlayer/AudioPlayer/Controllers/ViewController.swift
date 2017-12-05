@@ -36,8 +36,7 @@ class ViewController: UIViewController {
             playerHolder.heightAnchor.constraint(equalToConstant: playerDimension),
             ])
         //
-//        let url = URL(string : Urls.trackUrl)
-    //    playerHolder.player.url = url
+        HLSManager.shared.downloadStream(for: Asset())
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,4 +46,5 @@ class ViewController: UIViewController {
 
 
 }
+
 

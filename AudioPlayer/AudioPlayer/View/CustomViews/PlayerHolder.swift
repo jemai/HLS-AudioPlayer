@@ -20,8 +20,8 @@ class PlayerHolder: UIView {
     }()
     //
     let playerDimension = Dimensions.playerDimension - 20
-    //
-    
+    let notificationCenter = NotificationCenter.default
+
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -35,8 +35,15 @@ class PlayerHolder: UIView {
             player.widthAnchor.constraint(equalToConstant: playerDimension),
             player.heightAnchor.constraint(equalToConstant: playerDimension),
         ])
+        //
+        notificationCenter.addObserver(self, selector: #selector(downloadState(_:)), name: .AssetDownloadStateChanged, object: nil)
     }
     
+    @objc func downloadState(_ notification : Notification) {
+        if notification.userInfo![Keys.Asset.downloadState] as! String ==  DownloadState.downloading.rawValue {
+            player.url = notification.userInfo![Keys.Asset.locaion] as? URL
+        }
+    }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

@@ -9,7 +9,7 @@
 import Foundation
 
 struct Streams {
-    static let stream = Stream(name: "TrackName" , playList : "http://pubcache1.arkiva.de/test/hls_a256K_v4.m3u8")
+    static let stream =  "http://pubcache1.arkiva.de/test/hls_a256K_v4.m3u8"
 }
 
 

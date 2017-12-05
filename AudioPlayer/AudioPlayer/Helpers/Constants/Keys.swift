@@ -13,5 +13,16 @@ struct Keys {
         "playable",
         "hasProtectedContent"
     ]
+    //
+    struct Asset {
+        static let name = "Asset-name"
+        static let downloadState = "Asset-downloadState"
+        static let locaion = "location-url"
+    }
     
 }
+
+struct Identifiers {
+    static let sessionConfId = "backgroundDownload"
+}
+

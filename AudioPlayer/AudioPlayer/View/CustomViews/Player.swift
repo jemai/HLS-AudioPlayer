@@ -57,14 +57,12 @@ class Player: UIView {
     // MARK: - Variables
     var timer : Timer?
     var player = AVAudioPlayer()
-    //
+
     var url : URL? {
         didSet {
             guard let url = url else { return }
             //
-//            DownloadManager.loadData(from: url) { (localUrl, error) in
-//                self.configureSession(for: localUrl!)
-//            }
+            configureSession(for: url)
         }
     }
     
@@ -109,6 +107,8 @@ class Player: UIView {
             ])
         //
         playerTraker.addTarget(self, action: #selector(trackToTime), for: .valueChanged)
+        
+        //
     }
     
     required init?(coder aDecoder: NSCoder) {
