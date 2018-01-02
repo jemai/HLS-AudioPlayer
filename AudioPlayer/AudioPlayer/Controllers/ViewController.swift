@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         //
         return holder
     }()
+    
     // MARK: - Variables
     let playerDimension = Dimensions.playerDimension
     //
@@ -36,17 +37,6 @@ class ViewController: UIViewController {
             ])
         //
         HLSManager.shared.downloadStream(for: Asset())
-        //
-    }
-    //
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        let animator = UIDynamicAnimator(referenceView: self.view)
-        let behaviour = UIGravityBehavior(items: [playerHolder])
-        animator.addBehavior(behaviour)
-        //
-        let collision = UICollisionBehavior(items: [playerHolder])
-        animator.addBehavior(collision)
     }
 
     override func didReceiveMemoryWarning() {
