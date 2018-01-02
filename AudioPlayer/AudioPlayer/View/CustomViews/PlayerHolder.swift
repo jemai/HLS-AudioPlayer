@@ -21,10 +21,13 @@ class PlayerHolder: UIView {
     //
     let playerDimension = Dimensions.playerDimension - 20
     let notificationCenter = NotificationCenter.default
+    //
+    var animator: UIDynamicAnimator?
 
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        //
         addPanGestureRecognizer()
         //
         addSubview(player)
@@ -52,7 +55,27 @@ class PlayerHolder: UIView {
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handle))
         self.addGestureRecognizer(panGesture)
     }
-    
+    //
+    override func willMove(toWindow newWindow: UIWindow?) {
+        super.willMove(toWindow: newWindow)
+        //
+        addTapGesture()
+    }
+    //
+    func addTapGesture(){
+        if let superView = superview {
+            superView.isUserInteractionEnabled = true
+            superView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapSuper)))
+        }
+    }
+    //
+    @objc func didTapSuper(gesture: UITapGestureRecognizer) {
+        self.animator = UIDynamicAnimator(referenceView: self.superview!)
+        let point = gesture.location(in: superview)
+        let snap = UISnapBehavior(item: self, snapTo: point)
+        animator?.addBehavior(snap)
+    }
+    //
     @objc func handle(panGesture: UIPanGestureRecognizer) {
         // get translation
         let translation = panGesture.translation(in: self)
@@ -63,7 +86,7 @@ class PlayerHolder: UIView {
         view.center = CGPoint(x: view.center.x+translation.x, y: view.center.y+translation.y)
         view.isMultipleTouchEnabled = true
         view.isUserInteractionEnabled = true
-        
+
         //
         // checking the gesture state so we can react to that
         //
