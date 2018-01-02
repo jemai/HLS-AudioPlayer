@@ -15,6 +15,7 @@
 		FA20C37D1FD6CEE200536001 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20C37C1FD6CEE200536001 /* Asset.swift */; };
 		FA20C37F1FD6CF8600536001 /* HLSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20C37E1FD6CF8600536001 /* HLSManager.swift */; };
 		FA234A6D1FC870FE00A058DC /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA234A6C1FC870FE00A058DC /* Notifications.swift */; };
+		FA3B86A21FFBD45D0015D068 /* PlayerHolder+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B86A11FFBD45D0015D068 /* PlayerHolder+Animations.swift */; };
 		FA51C9131FC6D69F0006421C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C90F1FC6D69F0006421C /* Colors.swift */; };
 		FA51C9181FC6D7C00006421C /* PlayerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C9171FC6D7C00006421C /* PlayerHolder.swift */; };
 		FA51C9291FC6E28E0006421C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51C9281FC6E28E0006421C /* UIViewExtension.swift */; };
@@ -37,6 +38,7 @@
 		FA20C37C1FD6CEE200536001 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		FA20C37E1FD6CF8600536001 /* HLSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HLSManager.swift; sourceTree = "<group>"; };
 		FA234A6C1FC870FE00A058DC /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		FA3B86A11FFBD45D0015D068 /* PlayerHolder+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerHolder+Animations.swift"; sourceTree = "<group>"; };
 		FA51C90F1FC6D69F0006421C /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FA51C9171FC6D7C00006421C /* PlayerHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHolder.swift; sourceTree = "<group>"; };
 		FA51C9281FC6E28E0006421C /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				FA51C9171FC6D7C00006421C /* PlayerHolder.swift */,
 				FA51C9A31FC84BAA0006421C /* Player.swift */,
+				FA3B86A11FFBD45D0015D068 /* PlayerHolder+Animations.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				FA234A6D1FC870FE00A058DC /* Notifications.swift in Sources */,
 				FA51C9181FC6D7C00006421C /* PlayerHolder.swift in Sources */,
 				FA51C9A41FC84BAA0006421C /* Player.swift in Sources */,
+				FA3B86A21FFBD45D0015D068 /* PlayerHolder+Animations.swift in Sources */,
 				FA51C9131FC6D69F0006421C /* Colors.swift in Sources */,
 				FA20C37F1FD6CF8600536001 /* HLSManager.swift in Sources */,
 				C01FDC0F1FC63B0B00174287 /* AppDelegate.swift in Sources */,

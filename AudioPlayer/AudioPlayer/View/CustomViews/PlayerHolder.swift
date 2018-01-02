@@ -23,7 +23,6 @@ class PlayerHolder: UIView {
     let notificationCenter = NotificationCenter.default
     //
     var animator: UIDynamicAnimator?
-
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -37,7 +36,7 @@ class PlayerHolder: UIView {
             player.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             player.widthAnchor.constraint(equalToConstant: playerDimension),
             player.heightAnchor.constraint(equalToConstant: playerDimension),
-        ])
+            ])
         //
         notificationCenter.addObserver(self, selector: #selector(downloadState(_:)), name: .AssetDownloadStateChanged, object: nil)
     }
@@ -61,46 +60,4 @@ class PlayerHolder: UIView {
         //
         addTapGesture()
     }
-    //
-    func addTapGesture(){
-        if let superView = superview {
-            superView.isUserInteractionEnabled = true
-            superView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapSuper)))
-        }
-    }
-    //
-    @objc func didTapSuper(gesture: UITapGestureRecognizer) {
-        self.animator = UIDynamicAnimator(referenceView: self.superview!)
-        let point = gesture.location(in: superview)
-        let snap = UISnapBehavior(item: self, snapTo: point)
-        animator?.addBehavior(snap)
-    }
-    //
-    @objc func handle(panGesture: UIPanGestureRecognizer) {
-        // get translation
-        let translation = panGesture.translation(in: self)
-        panGesture.setTranslation(.zero, in: self)
-
-        // create a new Label and give it the parameters of the old one
-        guard let view = panGesture.view else { return }
-        view.center = CGPoint(x: view.center.x+translation.x, y: view.center.y+translation.y)
-        view.isMultipleTouchEnabled = true
-        view.isUserInteractionEnabled = true
-
-        //
-        // checking the gesture state so we can react to that
-        //
-        
-        switch panGesture.state {
-        case .began:
-            break
-        case .ended:
-            break
-        case .changed:
-            break
-        default:
-            break
-        }
-    }
-    
 }
