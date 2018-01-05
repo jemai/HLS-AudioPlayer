@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         view.addSubview(playerHolder)
         //
-        HLSManager.shared.downloadStream(for: Asset())
+        playerHolder.player.url = URL(string : "http://pubcache1.arkiva.de/test/hls_a256K_v4.m3u8")
     }
 
     override func didReceiveMemoryWarning() {

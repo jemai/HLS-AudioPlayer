@@ -56,13 +56,13 @@ class Player: UIView {
     }()
     // MARK: - Variables
     var timer : Timer?
-    var player = AVAudioPlayer()
-
+    var player = AVPlayer()
+    
     var url : URL? {
         didSet {
             guard let url = url else { return }
             //
-            configureSession(for: url)
+            configurePlayer(for: url)
         }
     }
     
@@ -116,25 +116,11 @@ class Player: UIView {
     }
     
     //configuring session
-    func configureSession(for url  : URL ){
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            player.prepareToPlay()
-            //
-            
-            let audioSession = AVAudioSession.sharedInstance()
-            //
-            do {
-                try audioSession.setCategory(AVAudioSessionCategoryPlayback)
-                
-            } catch let sessionError {
-                print("session error \(sessionError)")
-            }
-        } catch let songPlayerError {
-            print(songPlayerError)
-        }
-        
+    func configurePlayer(for url  : URL ){
 
+        self.player =  AVPlayer(url: url)
+        self.player.volume = 1.0
+        
     }
     
     // MARK: - Controle functions
@@ -145,21 +131,18 @@ class Player: UIView {
     }
     //
     @objc func pause(){
-        if player.isPlaying {
-            player.pause()
-        }
+        player.pause()
     }
     //
     @objc func restart(){
-        player.stop()
-        player.currentTime = 0
+        player.seek(to: CMTime(seconds: 0.0, preferredTimescale: CMTimeScale(bitPattern: UInt32(CMTimeScale.bitWidth))))
         player.play()
         startTracking()
     }
     // tracking functions
     func startTracking() {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (time) in
-            let normalizedTime = Float(self.player.currentTime / self.player.duration)
+            let normalizedTime = Float(self.player.currentTime().seconds / (self.player.currentItem?.duration.seconds)!)
             self.playerTraker.value = normalizedTime
             self.updateLabel()
         })
@@ -170,7 +153,7 @@ class Player: UIView {
     }
     //
     @objc func trackToTime(){
-        player.currentTime = Double(playerTraker.value) * self.player.duration
+        player.seek(to: CMTime(seconds: Double(Double(self.playerTraker.value) * (self.player.currentItem?.duration.seconds)!), preferredTimescale: CMTimeScale(CMTimeScale.bitWidth)))
     }
     //
     deinit {
@@ -179,13 +162,13 @@ class Player: UIView {
     //
     //
     func updateLabel(){
-        timeLabel.text = "\(player.currentTime.getTime())|\(player.duration.getTime())"
+        timeLabel.text = "\(self.player.currentTime().seconds.getTime())|\(self.player.currentItem?.duration.seconds.getTime() ?? "")"
     }
 }
 
 
 // MARK: - Extension to get time string from Time interval
-extension TimeInterval {
+extension Double {
     func getTime() -> String {
         if self > 10 {
             if self > 59 {
