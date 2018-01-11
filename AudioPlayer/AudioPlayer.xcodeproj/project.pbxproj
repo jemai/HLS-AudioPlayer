@@ -13,6 +13,7 @@
 		C01FDC161FC63B0B00174287 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01FDC151FC63B0B00174287 /* Assets.xcassets */; };
 		C01FDC191FC63B0B00174287 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01FDC171FC63B0B00174287 /* LaunchScreen.storyboard */; };
 		FA234A6D1FC870FE00A058DC /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA234A6C1FC870FE00A058DC /* Notifications.swift */; };
+		FA252D592007A5AD00CB8F57 /* PlayerHolder+BeatsViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA252D582007A5AD00CB8F57 /* PlayerHolder+BeatsViewer.swift */; };
 		FA3B86A21FFBD45D0015D068 /* PlayerHolder+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B86A11FFBD45D0015D068 /* PlayerHolder+Animations.swift */; };
 		FA3B86CF1FFFB5440015D068 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B86CE1FFFB5440015D068 /* Keys.swift */; };
 		FA3B86D11FFFB5790015D068 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3B86D01FFFB5790015D068 /* Downloader.swift */; };
@@ -34,6 +35,7 @@
 		C01FDC181FC63B0B00174287 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C01FDC1A1FC63B0B00174287 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA234A6C1FC870FE00A058DC /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		FA252D582007A5AD00CB8F57 /* PlayerHolder+BeatsViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerHolder+BeatsViewer.swift"; sourceTree = "<group>"; };
 		FA3B86A11FFBD45D0015D068 /* PlayerHolder+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayerHolder+Animations.swift"; sourceTree = "<group>"; };
 		FA3B86CE1FFFB5440015D068 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		FA3B86D01FFFB5790015D068 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				FA51C9171FC6D7C00006421C /* PlayerHolder.swift */,
 				FA51C9A31FC84BAA0006421C /* Player.swift */,
 				FA3B86A11FFBD45D0015D068 /* PlayerHolder+Animations.swift */,
+				FA252D582007A5AD00CB8F57 /* PlayerHolder+BeatsViewer.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				FA51C9131FC6D69F0006421C /* Colors.swift in Sources */,
 				FA3B86D11FFFB5790015D068 /* Downloader.swift in Sources */,
 				C01FDC0F1FC63B0B00174287 /* AppDelegate.swift in Sources */,
+				FA252D592007A5AD00CB8F57 /* PlayerHolder+BeatsViewer.swift in Sources */,
 				FA51C92B1FC6E29B0006421C /* UIColorExtension.swift in Sources */,
 				FA51C9A81FC84E3F0006421C /* Dimensions.swift in Sources */,
 				FA51C9AF1FC860E60006421C /* Enumerations.swift in Sources */,

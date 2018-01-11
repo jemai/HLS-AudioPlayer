@@ -128,10 +128,16 @@ class Player: UIView {
     @objc func play() {
         player.play()
         startTracking()
+        if let view = superview as? PlayerHolder {
+            view.goBeatIt()
+        }
     }
     //
     @objc func pause(){
         player.pause()
+        if let view = superview as? PlayerHolder {
+            view.timer.invalidate()
+        }
     }
     //
     @objc func restart(){

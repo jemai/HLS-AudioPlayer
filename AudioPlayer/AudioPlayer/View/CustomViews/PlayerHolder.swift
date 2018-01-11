@@ -21,6 +21,7 @@ class PlayerHolder: UIView {
     //
     let playerDimension = Dimensions.playerDimension - 20
     let notificationCenter = NotificationCenter.default
+    var timer : Timer!
     //
     var animator: UIDynamicAnimator?
     // MARK: - Init
